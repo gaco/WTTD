@@ -1,7 +1,7 @@
 # Django settings for eventex project.
 
 import os
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('DEBUG', 'False')
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
