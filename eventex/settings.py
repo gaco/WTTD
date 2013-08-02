@@ -29,7 +29,7 @@ import dj_database_url
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:/// ' + PROJECT_DIR.child('database.db'))
+    'default': dj_database_url.config(default='sqlite:///' + PROJECT_DIR.child('database.db'))
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -136,6 +136,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'eventex.core',
+    'eventex.subscriptions',
 )
 
 # A sample logging configuration. The only tangible logging
