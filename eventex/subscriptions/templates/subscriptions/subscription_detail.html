@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<p><b>{{ subscription.name }}</b>, sua inscrição ao <strong style="color: blue">EventX</strong> foi realizada em <b>{{ subscription.created_at | date:"d/m/Y"}}</b> com sucesso.</p>
+<p>Dentro de alguns dias entraremos em contato pelo
+    {% if subscription.phone %}
+    telefone <b>{{ subscription.phone }}</b>.
+    {% else %}
+    e-mail <b>{{ subscription.email }}</b>.
+    {% endif %}
+</p>
+{% endblock %}

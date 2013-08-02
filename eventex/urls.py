@@ -6,7 +6,8 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
                        url(r'^$', 'eventex.core.views.homepage', name='homepage'),
-                       url(r'^inscricao/$', 'eventex.subscriptions.views.subscribe', name='subscribe')
+                       url(r'^inscricao/$', 'eventex.subscriptions.views.subscribe', name='subscribe'),
+                       url(r'^inscricao/(\d+)/$', 'eventex.subscriptions.views.detail', name='detail'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

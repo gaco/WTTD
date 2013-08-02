@@ -9,22 +9,22 @@
     <p>
         <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
         {{ form.name }}
-        {{ form.name.errors }}
+        <span style="color: red;">{{ form.name.errors }}</span>
     </p>
     <p>
         <label for="{{ form.name.id_for_label }}">{{ form.cpf.label }}:</label>
         {{ form.cpf }}
-        {{ form.cpf.errors }}
+        <span style="color: red">{{ form.cpf.errors }}</span>
     </p>
     <p>
         <label for="{{ form.email.id_for_label }}">{{ form.email.label }}:</label>
         {{ form.email }}
-        {{ form.email.errors }}
+        <span style="color: red;">{{ form.email.errors }}</span>
     </p>
     <p>
         <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}:</label>
         {{ form.phone }}
-        {{ form.phone.errors }}
+        <span style="color: red;">{{ form.phone.errors }}</span>
     </p>
     <input type="submit" value="Enviar!" class="button">
 </form>
