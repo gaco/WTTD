@@ -21,4 +21,10 @@ class DetailTest(TestCase):
         self.assertIsInstance(subscription, Subscription)
 
     def test_html(self):
-        self.assertContains(self.resp,'Gabriel Cortes ')
+        self.assertContains(self.resp,'Gabriel Cortes')
+
+
+class DetailNotFound(TestCase):
+    def test_not_found(self):
+        response = self.client.get('/inscricao/0/')
+        self.assertEqual(404, response.status_code)
